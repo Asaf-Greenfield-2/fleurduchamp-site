@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4eee3" />
+
+  <title>Fleur du Champ — Bespoke Interiors that Enhance your Wellbeing</title>
+  <meta name="description" content="Fleur du Champ is a luxury interior design studio creating bespoke spaces built around organically and consciously sourced fabrics and materials." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fleur du Champ" />
+  <meta property="og:title" content="Fleur du Champ — Bespoke Interiors that Enhance your Wellbeing" />
+  <meta property="og:description" content="Luxury interior design built around organically and consciously sourced materials. Our full site is on its way." />
+  <meta property="og:url" content="https://fleurduchampdesign.com/" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fleur du Champ — Bespoke Interiors that Enhance your Wellbeing" />
+  <meta name="twitter:description" content="Luxury interior design built around organically and consciously sourced materials." />
+
+  <!-- Favicon: inline SVG, sage sprig on cream -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23f4eee3'/><g fill='none' stroke='%238a9472' stroke-width='2.4' stroke-linecap='round'><path d='M32 52 V20'/><path d='M32 30 C24 28 20 22 20 16'/><path d='M32 36 C40 34 44 28 44 22'/><path d='M32 24 C26 22 23 18 23 13'/><path d='M32 44 C39 42 42 37 42 33'/></g></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ---------- Palette ----------
+       cream     #f4eee3   warm off-white background
+       oat       #e9e0cf   soft band
+       stone     #cdbfa6   line / muted detail
+       sage      #8a9472   natural accent
+       sage-dk   #6f7a59   accent on hover
+       charcoal  #2c2a25   text (soft, not pure black)
+       mute      #6b665d   secondary text
+    */
+
+    *,
+    *::before,
+    *::after { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      background: #f4eee3;
+      color: #2c2a25;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Soft botanical wash — a single restrained background gradient */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(60% 50% at 12% 8%,  rgba(138,148,114,0.10), transparent 70%),
+        radial-gradient(55% 45% at 92% 96%, rgba(205,191,166,0.30), transparent 72%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 5vw, 2.5rem) 3rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 100svh;
+      animation: rise 900ms ease-out both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      main { animation: none; }
+    }
+
+    /* ---------- Top mark ---------- */
+    header {
+      text-align: center;
+      padding-top: clamp(1rem, 4vw, 2rem);
+    }
+
+    .mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: "Inter", sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #6f7a59;
+      font-weight: 500;
+    }
+
+    .mark svg { width: 18px; height: 18px; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      text-align: center;
+      margin-top: clamp(2.5rem, 7vw, 4.5rem);
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(2.8rem, 8vw, 4.6rem);
+      line-height: 1.02;
+      letter-spacing: -0.005em;
+      margin: 0 0 1.2rem;
+      color: #2c2a25;
+    }
+
+    .tagline {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+      color: #6b665d;
+      margin: 0 auto;
+      max-width: 32ch;
+      line-height: 1.45;
+    }
+
+    .rule {
+      display: block;
+      width: 56px;
+      height: 1px;
+      background: #cdbfa6;
+      border: 0;
+      margin: clamp(2rem, 5vw, 3rem) auto;
+    }
+
+    /* ---------- Intro ---------- */
+    .intro {
+      max-width: 56ch;
+      margin: 0 auto;
+      text-align: center;
+      color: #4a463f;
+    }
+
+    .intro p { margin: 0 0 1rem; }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro em {
+      font-style: normal;
+      color: #6f7a59;
+      font-weight: 500;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact {
+      margin-top: clamp(2.5rem, 6vw, 4rem);
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      font-size: 0.78rem;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: #6f7a59;
+      margin: 0 0 1.5rem;
+      font-style: normal;
+    }
+
+    .contact ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      align-items: center;
+    }
+
+    .contact li {
+      font-size: 1.02rem;
+      color: #4a463f;
+    }
+
+    .contact .label {
+      display: inline-block;
+      min-width: 5.5rem;
+      color: #8a8479;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-align: right;
+      margin-right: 0.4rem;
+    }
+
+    .contact a {
+      color: #2c2a25;
+      text-decoration: none;
+      border-bottom: 1px solid #cdbfa6;
+      padding-bottom: 2px;
+      transition: color 160ms ease, border-color 160ms ease;
+    }
+    .contact a:hover,
+    .contact a:focus-visible {
+      color: #6f7a59;
+      border-bottom-color: #6f7a59;
+    }
+    .contact a:focus-visible {
+      outline: 2px solid #8a9472;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 480px) {
+      .contact ul { gap: 0.85rem; }
+      .contact li { display: flex; flex-direction: column; gap: 0.15rem; }
+      .contact .label { text-align: center; margin: 0; }
+    }
+
+    .note {
+      margin-top: clamp(2rem, 5vw, 3rem);
+      text-align: center;
+      font-size: 0.98rem;
+      color: #6b665d;
+      max-width: 44ch;
+      margin-left: auto;
+      margin-right: auto;
+      font-style: italic;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.15rem;
+      line-height: 1.5;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      margin-top: auto;
+      padding-top: clamp(3rem, 8vw, 5rem);
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #8a8479;
+    }
+
+    ::selection { background: #d9d6c2; color: #2c2a25; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <span class="mark" aria-label="Fleur du Champ — interior design">
+        <!-- Small sage sprig -->
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="#8a9472" stroke-width="1.6" stroke-linecap="round">
+            <path d="M16 28 V8"/>
+            <path d="M16 14 C12 13 10 10 10 7"/>
+            <path d="M16 18 C20 17 22 14 22 11"/>
+            <path d="M16 22 C13 21 11 19 11 16"/>
+          </g>
+        </svg>
+        Interior Design Studio
+      </span>
+    </header>
+
+    <section class="hero" aria-labelledby="brand">
+      <h1 id="brand">Fleur du Champ</h1>
+      <p class="tagline">Bespoke Interiors that Enhance your Wellbeing</p>
+    </section>
+
+    <hr class="rule" aria-hidden="true" />
+
+    <section class="intro" aria-label="About">
+      <p>
+        Fleur du Champ is a luxury interior design studio creating bespoke spaces that
+        nurture how you live and feel. Every interior is built around
+        <em>natural, consciously and organically sourced</em> fabrics and materials —
+        because we believe beautiful design and organic living belong together.
+      </p>
+      <p>Our full site is on its way. In the meantime, we'd love to hear from you.</p>
+    </section>
+
+    <!--
+      ============================================================
+      OWNER: edit your real contact details here before launch.
+      Replace the four values below (email, tel, Instagram handle,
+      and location). The visible text and the link target should
+      both be updated.
+      ============================================================
+    -->
+    <section class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Get in touch</h2>
+      <ul>
+        <li>
+          <span class="label">Email</span>
+          <a href="mailto:hello@fleurduchampdesign.com">hello@fleurduchampdesign.com</a>
+        </li>
+        <li>
+          <span class="label">Phone</span>
+          <a href="tel:+10000000000">[your phone number]</a>
+        </li>
+        <li>
+          <span class="label">Instagram</span>
+          <a href="https://instagram.com/your_handle" target="_blank" rel="noopener noreferrer">@your_handle</a>
+        </li>
+        <li>
+          <span class="label">Studio</span>
+          <span>By appointment</span>
+        </li>
+      </ul>
+
+      <p class="note">
+        Be the first to know when we launch — send us a note and we'll add you to our list.
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Fleur du Champ Design
+    </footer>
+  </main>
+</body>
+</html>
