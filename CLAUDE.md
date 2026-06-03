@@ -2,7 +2,7 @@
 
 ## Goal
 Build a single, polished, on-brand "coming soon" placeholder page for the domain
-**fleurduchampdesign.com**, then help me deploy it and point my domain at it. This is
+**fleurduchamp.com**, then help me deploy it and point my domain at it. This is
 temporary — the full site comes later — but it should already look high-end, not generic.
 
 ## What to build
@@ -49,18 +49,22 @@ code comment where those values live so they're easy to find and edit.
 - `index.html` in the project root, ready to upload/deploy as-is.
 
 ## Deployment + domain connection
-I registered **fleurduchampdesign.com** through **Northwest Registered Agent**. DNS
-management is included in my Northwest account. Recommend and walk me through the fastest
-path to get this static `index.html` live on that domain. Likely the simplest is a free
-static host (Cloudflare Pages, Netlify, or Vercel) deployed via CLI, then pointing the
-domain through Northwest's DNS.
+The site is deployed as a static page on **GitHub Pages** from the repo
+`Asaf-Greenfield-2/fleurduchamp-site` (branch `main`, folder `/`). The custom domain is
+**fleurduchamp.com**, which is registered through **Squarespace** (formerly Google
+Domains); DNS is managed in the Squarespace domain dashboard.
 
-Please:
-1. Pick a deploy target and explain why (favor free, fast, static-friendly).
-2. Give me the exact CLI commands to deploy `index.html`, and run them with me.
-3. After deploy, tell me the exact DNS records or nameservers I need to enter in my
-   Northwest domain dashboard (apex `fleurduchampdesign.com` **and** `www`), in plain steps.
-4. Note that I, the owner, will enter those DNS values and any login credentials myself —
-   do not ask for my passwords or account logins.
-5. Remind me it can take a little while (often under an hour, sometimes longer) for DNS
-   changes to propagate, and how to verify the site is live.
+Operational notes:
+1. The deploy target is GitHub Pages — free, fast, static-friendly, no build step.
+2. Deploys happen by pushing to `main`. The `CNAME` file in the repo root pins the
+   custom domain to `fleurduchamp.com`.
+3. DNS for `fleurduchamp.com` is entered in the Squarespace dashboard:
+   - Apex `@` → four A records to GitHub Pages: 185.199.108.153, 185.199.109.153,
+     185.199.110.153, 185.199.111.153
+   - `www` → CNAME to `asaf-greenfield-2.github.io`
+4. The owner (Asaf Greenfield) enters all DNS values and account logins himself —
+   do not ask for passwords or account credentials.
+5. DNS changes typically propagate in under an hour but can take longer. Verify
+   propagation with `dig +short fleurduchamp.com` and then load the domain.
+6. Enable "Enforce HTTPS" in GitHub Pages settings only AFTER DNS is pointing at
+   GitHub and the certificate has provisioned.

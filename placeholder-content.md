@@ -14,7 +14,7 @@ belong together.
 Our full site is on its way. In the meantime, we'd love to hear from you.
 
 ## Get in touch
-- Email: [hello@fleurduchampdesign.com]
+- Email: [hello@fleurduchamp.com]
 - Phone: [your phone number]
 - Instagram: [@your_handle]
 - Location: [city / "By appointment"]
